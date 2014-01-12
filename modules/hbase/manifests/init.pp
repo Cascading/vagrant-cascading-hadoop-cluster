@@ -1,5 +1,5 @@
 class hbase {
-  $hbase_version = "0.94.13"
+  $hbase_version = "0.94.15"
   $hbase_home = "/opt/hbase-${hbase_version}"
   $hbase_tarball = "hbase-${hbase_version}.tar.gz"
 
@@ -48,7 +48,7 @@ class hbase {
       group => root,
       require => Exec["unpack_hbase"]
   }
-  
+
   file { "/etc/profile.d/hbase-path.sh":
     content => template("hbase/hbase-path.sh.erb"),
     owner => root,

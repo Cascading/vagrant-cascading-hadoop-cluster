@@ -1,4 +1,6 @@
 *.sw[a-z]
 .vagrant
-hadoop.tar.gz
 employees.tgz
+hadoop-*.tar.gz
+hadoop-*.tar.gz.mds
+hbase-*.tar.gz
