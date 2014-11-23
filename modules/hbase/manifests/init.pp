@@ -1,5 +1,5 @@
 class hbase {
-  $hbase_version = "0.98.6.1"
+  $hbase_version = "0.98.8"
   $hbase_platform = "hadoop2"
   $hbase_home = "/opt/hbase-${hbase_version}-${hbase_platform}"
   $hbase_tarball = "hbase-${hbase_version}-${hbase_platform}-bin.tar.gz"
