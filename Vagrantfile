@@ -11,6 +11,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ["modifyvm", :id, "--cpus", "1", "--memory", "512"]
   end
 
+  config.vm.provider "vmware_fusion" do |v, override|
+      override.vm.box_url = "http://files.vagrantup.com/precise64_vmware.box"
+      v.vmx["memsize"] = "512"
+      v.vmx["numvcpus"] = "1"
+  end
+
   config.vm.define :hadoop1 do |hadoop1|
     hadoop1.vm.network "private_network", ip: "192.168.7.12"
     hadoop1.vm.hostname = "hadoop1.local"
