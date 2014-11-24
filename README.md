@@ -26,7 +26,7 @@ This work is based on: http://cscarioni.blogspot.co.uk/2012/09/setting-up-hadoop
 
 ## Deploying the cluster
 
-First install both [Virtual Box](http://virtualbox.org) and [Vagrant](http://vagrantup.com/) for your platform.
+First install either [Virtual Box](http://virtualbox.org) (free) or [VMware Fusion/Workstation](http://www.vmware.com/products/fusion/) (paid) and [Vagrant](http://vagrantup.com/) for your platform. If using VMware Fusion/Workstation, you will also need a VMware + Vagrant [license](https://www.vagrantup.com/vmware).
 
 Then simply clone this repository, change into the directory and bring the cluster up.
 
