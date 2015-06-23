@@ -1,5 +1,5 @@
 class hbase {
-  $hbase_version = "0.98.12"
+  $hbase_version = "0.98.13"
   $hbase_platform = "hadoop2"
   $hbase_home = "/opt/hbase-${hbase_version}-${hbase_platform}"
   $hbase_tarball = "hbase-${hbase_version}-${hbase_platform}-bin.tar.gz"
@@ -9,7 +9,7 @@ class hbase {
   }
 
   exec { "download_hbase":
-    command => "/tmp/grrr /hbase/hbase-${hbase_version}/$hbase_tarball -O /vagrant/$hbase_tarball --read-timeout=5 --tries=0",
+    command => "/tmp/grrr /hbase/${hbase_version}/$hbase_tarball -O /vagrant/$hbase_tarball --read-timeout=5 --tries=0",
     timeout => 1800,
     path => $path,
     creates => "/vagrant/$hbase_tarball",
