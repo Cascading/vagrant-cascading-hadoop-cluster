@@ -14,7 +14,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define :master do |master|
     master.vm.network "private_network", ip: "192.168.7.10"
     master.vm.hostname = "master.local"
-
+    
     config.vm.provision :puppet do |puppet|
       puppet.manifest_file = "master-single.pp"
       puppet.module_path = "../modules"

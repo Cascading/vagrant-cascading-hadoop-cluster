@@ -1,6 +1,6 @@
 class hadoop($slaves_file = undef, $hdfs_site_file = undef) {
 
-  $hadoop_version = "2.6.0"
+  $hadoop_version = "2.7.1"
   $hadoop_home = "/opt/hadoop-${hadoop_version}"
   $hadoop_tarball = "hadoop-${hadoop_version}.tar.gz"
   $hadoop_tarball_checksums = "${hadoop_tarball}.mds"
@@ -41,7 +41,7 @@ class hadoop($slaves_file = undef, $hdfs_site_file = undef) {
     timeout => 1800,
     path => $path,
     creates => "/vagrant/$hadoop_tarball",
-    require => [ Package["openjdk-6-jdk"], Exec["download_grrr"]]
+    require => [ Package["openjdk-7-jdk"], Exec["download_grrr"]]
   }
 
   exec { "download_checksum":

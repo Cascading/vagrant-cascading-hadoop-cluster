@@ -3,11 +3,11 @@
 <configuration>
  <property>
   <name>dfs.replication</name>
-  <value>3</value>
+  <value>2</value>
   <description>The actual number of replications can be specified when the file is created.</description>
  </property>
 <property>
-  <name>dfs.permissions</name>
+  <name>dfs.permissions.enabled</name>
   <value>false</value>
   <description>
     If "true", enable permission checking in HDFS.
@@ -18,11 +18,11 @@
   </description>
 </property>
 <property>
-    <name>dfs.data.dir</name>
+    <name>dfs.datanode.data.dir</name>
     <value>/srv/hadoop/datanode</value>
 </property>
 <property>
-    <name>dfs.name.dir</name>
+    <name>dfs.namenode.name.dir</name>
     <value>/srv/hadoop/namenode</value>
 </property>
 </configuration>

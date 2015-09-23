@@ -10,7 +10,7 @@ class cascading{
     # S3 can be slow at times hence a longer timeout
     timeout => 1800,
     unless => "ls /opt | grep CascadingSDK",
-    require => Package["openjdk-6-jdk"]
+    require => Package["openjdk-7-jdk"]
   }
 
   exec { "unpack_sdk" :

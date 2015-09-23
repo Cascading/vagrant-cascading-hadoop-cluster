@@ -1,4 +1,4 @@
-export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 export CASCADING_SDK_HOME=/opt/CascadingSDK
 
 . $CASCADING_SDK_HOME/etc/setenv.sh
